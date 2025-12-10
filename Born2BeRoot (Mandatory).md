@@ -5,7 +5,7 @@ Before using a disk, it is essential to partition it.
 **Therefore, it is necessary to choose between MBR and GPT before creating partitions on a disk.**
 
 <details>
-  <summary>**MBR (Master Boot Record)**</summary>
+  <summary><strong>MBR (Master Boot Record)</strong></summary>
 
 **1 — Historical standard (1983):**  
 It was introduced with IBM PC DOS 2.0 in 1983. It is old but still used for compatibility.
@@ -24,9 +24,7 @@ The **BIOS** loads the MBR. It consists of the first 512 bytes of the disk. From
 </details>
 
 <details>
-  <summary>
-	  **GPT (GUID Partition Table)**
-  </summary>
+  <summary><strong>GPT (GUID Partition Table)</strong></summary>
 
 **1 — New standard:**  
 It's a new standard that is gradually replacing the aging MBR. It's associated with UEFI, which itself replaces the BIOS.
@@ -39,8 +37,8 @@ Includes a "protective MBR" so old software won’t think the disk is empty.
 
 </details>
 
-On an #MBR disk, partitioning and boot data are stored in a single location. If this data is overwritten or damaged, it's a disaster.  
-In contrast, #GPT stores multiple copies of this data across the disk, making it much more robust and capable of data recovery if it becomes corrupted.  
-#GPT also stores the **CRC (Cyclic Redundancy Check)** to verify that the data is intact.  
-Therefore, if the data is corrupted, #GPT can report the problem and attempt to recover the damaged data from another location on the disk.  
-With #MBR, there was no way to know if data was corrupted. And by the time a problem was detected, it was too late, because the disk partition might have disappeared, for example.
+On an `MBR` disk, partitioning and boot data are stored in a single location. If this data is overwritten or damaged, it's a disaster.  
+In contrast, `GPT` stores multiple copies of this data across the disk, making it much more robust and capable of data recovery if it becomes corrupted.  
+`GPT` also stores the **CRC (Cyclic Redundancy Check)** to verify that the data is intact.  
+Therefore, if the data is corrupted, `GPT` can report the problem and attempt to recover the damaged data from another location on the disk.  
+With `MBR`, there was no way to know if data was corrupted. And by the time a problem was detected, it was too late, because the disk partition might have disappeared, for example.
