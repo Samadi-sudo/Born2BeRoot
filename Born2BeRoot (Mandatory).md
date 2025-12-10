@@ -7,33 +7,33 @@ Before using a disk, it is essential to partition it.
 <details>
   <summary><strong>MBR (Master Boot Record)</strong></summary>
 
-**1 — Historical standard (1983):**  
-It was introduced with IBM PC DOS 2.0 in 1983. It is old but still used for compatibility.
+&nbsp;&nbsp;&nbsp;&nbsp;**1 — Historical standard (1983):**  
+&nbsp;&nbsp;&nbsp;&nbsp;It was introduced with IBM PC DOS 2.0 in 1983. It is old but still used for compatibility.
 
-**2 — Structure:**  
-It's called **MBR** because it's a boot sector located at the beginning of a drive. This sector contains a boot loader for the installed operating system as well as information about the logical partitions.
+&nbsp;&nbsp;&nbsp;&nbsp;**2 — Structure:**  
+&nbsp;&nbsp;&nbsp;&nbsp;It's called **MBR** because it's a boot sector located at the beginning of a drive. This sector contains a boot loader for the installed operating system as well as information about the logical partitions.
 
-**3 — BIOS Boot Process:**  
-The **BIOS** loads the MBR. It consists of the first 512 bytes of the disk. From the information in the MBR, it determines the location of the boot loader.
+&nbsp;&nbsp;&nbsp;&nbsp;**3 — BIOS Boot Process:**  
+&nbsp;&nbsp;&nbsp;&nbsp;The **BIOS** loads the MBR. It consists of the first 512 bytes of the disk. From the information in the MBR, it determines the location of the boot loader.
 
-**4 — Limitations:**  
-- Supports disks only up to **2 TB** (because of 32-bit addressing).  
-- Maximum of **4 primary partitions**. More partitions require an “extended partition” containing logical partitions.  
-- No backup of partition table → corruption = possible data loss.
+&nbsp;&nbsp;&nbsp;&nbsp;**4 — Limitations:**  
+&nbsp;&nbsp;&nbsp;&nbsp;- Supports disks only up to **2 TB** (because of 32-bit addressing).  
+&nbsp;&nbsp;&nbsp;&nbsp;- Maximum of **4 primary partitions**. More partitions require an “extended partition” containing logical partitions.  
+&nbsp;&nbsp;&nbsp;&nbsp;- No backup of partition table → corruption = possible data loss.
 
 </details>
 
 <details>
   <summary><strong>GPT (GUID Partition Table)</strong></summary>
 
-**1 — New standard:**  
-It's a new standard that is gradually replacing the aging MBR. It's associated with UEFI, which itself replaces the BIOS.
+&nbsp;&nbsp;&nbsp;&nbsp;**1 — New standard:**  
+&nbsp;&nbsp;&nbsp;&nbsp;It's a new standard that is gradually replacing the aging MBR. It's associated with UEFI, which itself replaces the BIOS.
 
-**2 — GUID:**  
-Each partition on your hard drive has a unique identifier (**GUID = Globally Unique Identifier**).
+&nbsp;&nbsp;&nbsp;&nbsp;**2 — GUID:**  
+&nbsp;&nbsp;&nbsp;&nbsp;Each partition on your hard drive has a unique identifier (**GUID = Globally Unique Identifier**).
 
-**3 — Compatibility:**  
-Includes a "protective MBR" so old software won’t think the disk is empty.
+&nbsp;&nbsp;&nbsp;&nbsp;**3 — Compatibility:**  
+&nbsp;&nbsp;&nbsp;&nbsp;Includes a "protective MBR" so old software won’t think the disk is empty.
 
 </details>
 
